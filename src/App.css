@@ -1,113 +1,38 @@
-.app {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f5f5f5;
+div .app {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
+    
+}
+.container{
+    background: linear-gradient(45deg, #6036ff, #2212ff);
+    width: 88rem;
+    height: 15rem;
+    padding: 0.05rem 0.1rem 10rem 7.5rem;
+    text-align: start;
+    color: white;
+    font-size: 4rem;
+}
+.Title{
+    margin: 2.5rem 0 0 0;
+}
+.subTitle{ 
+    margin: 0.5rem 0 2rem 0;
+    font-size: 2rem;
+    color: #e3e2e2;
 }
 
-/* Estilos para el título */
-h1 {
-    font-size: 36px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
-form input{
-    width: 37rem;
-    height: 3.2rem;
-    border-radius: 0.3rem;
-}
-/* Estilos para el input de tareas */
-.task-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
 
-/* Estilos para la lista de tareas */
-.task-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.task-list li {
+div .containerMainFooter{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    flex-direction: column;
+    border: 0.02rem solid rgb(183, 177, 177);
+    border-radius: 1.5rem;
+    box-shadow: -2px 4px rgb(129, 128, 128);
+    padding: 0 0.5rem 1.5rem 0;
+    margin: -5rem 15.8rem 5rem 7.5rem;
+    background-color:#fffdfd ;
 }
 
-.task-list li.completed {
-    text-decoration: line-through;
-    color: #090909;
-}
-
-/* Estilos para los botones de acción de cada tarea */
-.task-list li button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #ff0000;
-    font-size: 18px;
-    margin-left: 10px;
-}
-
-.task-list li button:hover {
-    color: #060505;
-}
-
-/* Estilos del footer y los filtros */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.filters {
-    display: flex;
-    gap: 10px;
-}
-
-.filters a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #090909;
-}
-
-.filters a.selected {
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-
-/* Botón para eliminar completadas */
-footer button {
-    background-color: #fefbfb;
-    color: rgb(6, 6, 6);
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-footer button:hover {
-    background-color: #ff1a1a;
-}
-
-/* Estilos generales para botones y tareas */
-button {
-    font-size: 16px;
-    cursor: pointer;
-}

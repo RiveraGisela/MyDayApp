@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TaskList.css'
 
 const TaskList = ({ tasks, toggleTaskCompletion, updateTask, deleteTask }) => {
     const [editingId, setEditingId] = useState(null);

@@ -59,11 +59,14 @@ const App = () => {
 
     return (
         <div className="app">
-            <h1>My Day</h1>
-            <h4>All my tasks in one place</h4>
-            <TaskInput addTask={addTask} />
+            <div className='container'>
+              <p className='Title'>My Day</p>
+              <p className='subTitle'>All my tasks in one place</p>
+              <TaskInput addTask={addTask} />
+            </div>
             {tasks.length > 0 && (
                 <>
+                <div className=' containerMainFooter'>
                     <TaskList 
                         tasks={filteredTasks} 
                         toggleTaskCompletion={toggleTaskCompletion} 
@@ -75,6 +78,7 @@ const App = () => {
                         filter={filter} 
                         clearCompleted={clearCompleted} 
                     />
+                    </div>
                 </>
             )}
         </div>
