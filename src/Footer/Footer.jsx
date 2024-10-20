@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Footer = ({ filter, clearCompleted }) => {
     return (
         <footer>
+            
             <div className="filters">
                 <NavLink exact to="/all" activeClassName="selected">
                     All

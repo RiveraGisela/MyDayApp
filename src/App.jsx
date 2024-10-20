@@ -3,6 +3,7 @@ import { BrowserRouter, useLocation } from 'react-router-dom';
 import TaskInput from './TaskInput/TaskInput';
 import TaskList from './TaskList/TaskList';
 import Footer from './Footer//Footer';
+import './App.css'
 
 const App = () => {
     const [tasks, setTasks] = useState([]);
