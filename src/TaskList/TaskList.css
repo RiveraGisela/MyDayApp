@@ -1,0 +1,64 @@
+/* Estilos para la lista de tareas */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 66rem;
+    height: 5.2rem;
+    padding: 0.05rem 0rem 10rem 0.5rem;
+    color: rgb(73, 73, 73);
+    overflow-y: auto; /* Permite que la lista de tareas sea desplazable si hay muchas tareas */
+    max-height: calc(100vh - 20rem); 
+}
+.task-list input[type="checkbox"] {
+    width: 1.8rem;   /* Ajusta el tamaño del checkbox */
+    height: 1.8rem;  /* Ajusta el tamaño del checkbox */
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+.task-list input[type="checkbox"]:checked::after {
+    content: '✔'; /* El símbolo del checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;  /* Ajusta el tamaño del checkmark según el tamaño del checkbox */
+    color: green;     /* El color verde del checkmark */
+    font-weight: bold;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.8rem;
+    font-size: 2.3rem;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li.completed {
+    text-decoration: line-through;
+    color: #828080;
+    
+}
+
+/* Estilos para los botones de acción de cada tarea */
+.task-list li button {
+    background: none;
+    color: white;
+    border: 4rem;
+    font-size: 1rem;
+    padding: 0.4rem;
+    cursor:none;
+    
+}
+
