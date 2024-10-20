@@ -6,16 +6,16 @@ const Footer = ({ filter, clearCompleted }) => {
         <footer>
             <div className="filters">
                 <NavLink exact to="/all" activeClassName="selected">
-                    Todas
+                    All
                 </NavLink>
                 <NavLink to="/pending" activeClassName="selected">
-                    Pendientes
+                    Pending
                 </NavLink>
                 <NavLink to="/completed" activeClassName="selected">
-                    Completadas
+                    Completed
                 </NavLink>
             </div>
-            <button onClick={clearCompleted}>Eliminar Completadas</button>
+            <button onClick={clearCompleted}>Clear completed</button>
         </footer>
     );
 };
