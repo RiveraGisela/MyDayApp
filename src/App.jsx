@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, useLocation } from 'react-router-dom';
 import TaskInput from './TaskInput/TaskInput';
 import TaskList from './TaskList/TaskList';
-import Footer from './Footer//Footer';
+import Footer from './Footer/Footer';
 import './App.css'
 
 const App = () => {
     const [tasks, setTasks] = useState([]);
-    
-    
+
+  
     useEffect(() => {
         const storedTasks = JSON.parse(localStorage.getItem('mydayapp-reactjs'));
         if (storedTasks) setTasks(storedTasks);
@@ -54,10 +54,13 @@ const App = () => {
     const filter = location.pathname.replace('/', '') || 'all';
     const filteredTasks = filterTasks(filter);
 
+    
+    const pendingTasksCount = tasks.filter(task => !task.completed).length;
+
     return (
         <div className="app">
             <h1>My Day</h1>
-            <h4>All my task in one place</h4>
+            <h4>All my tasks in one place</h4>
             <TaskInput addTask={addTask} />
             {tasks.length > 0 && (
                 <>
@@ -68,6 +71,7 @@ const App = () => {
                         deleteTask={deleteTask}
                     />
                     <Footer 
+                        tasksCount={pendingTasksCount}  
                         filter={filter} 
                         clearCompleted={clearCompleted} 
                     />
