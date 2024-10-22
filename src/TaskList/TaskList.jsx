@@ -40,7 +40,7 @@ const TaskList = ({ tasks, toggleTaskCompletion, updateTask, deleteTask }) => {
                     ) : (
                         <label onDoubleClick={() => handleEdit(task)}>{task.title}</label>
                     )}
-                    <button className="destroy" onClick={() => deleteTask(task.id)}>X</button>
+                    <button className="destroy" onClick={() => deleteTask(task.id)}>Eliminar</button>
                 </li>
             ))}
         </ul>

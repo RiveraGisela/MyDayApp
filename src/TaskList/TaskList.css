@@ -1,36 +1,32 @@
-/* Estilos para la lista de tareas */
+
 .task-list {
-    display: flex;
-    flex-direction: column;
     list-style-type: none;
-    width: 66rem;
-    height: 5.2rem;
-    padding: 0.05rem 0rem 10rem 0.5rem;
+    width: 95%;
+    padding: 1rem;
     color: rgb(73, 73, 73);
-    overflow-y: auto; /* Permite que la lista de tareas sea desplazable si hay muchas tareas */
-    max-height: calc(100vh - 20rem); 
+    overflow-y: auto;
+    max-height: 20rem; 
 }
+
 .task-list input[type="checkbox"] {
-    width: 1.8rem;   /* Ajusta el tamaño del checkbox */
-    height: 1.8rem;  /* Ajusta el tamaño del checkbox */
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
-    border: 2px solid #ccc;
+    border: 0.125rem solid #ccc;
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     cursor: pointer;
     outline: none;
     position: relative;
 }
 
 .task-list input[type="checkbox"]:checked::after {
-    content: '✔'; /* El símbolo del checkmark */
+    content: '✔';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;  /* Ajusta el tamaño del checkmark según el tamaño del checkbox */
-    color: green;     /* El color verde del checkmark */
+    font-size: 1.5rem;
+    color: green;
     font-weight: bold;
 }
 
@@ -39,26 +35,39 @@
     justify-content: start;
     align-items: center;
     gap: 1.8rem;
-    font-size: 2.3rem;
+    font-size: 2.3rem; 
     background-color: white;
-    padding: 1rem;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.task-list li button {
+    background: none;
+    color: rgb(248, 243, 243);
+    border: none;
+    font-size: 1rem;
+    padding: 0.4rem;
+    cursor: none;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+    position: absolute;
+    right: 17rem;
+}
+
+
+.task-list li:hover button {
+    opacity: 1;  
+    cursor: pointer;
+    color: #090909;
+    background-color: red;
+}
+
+
+.task-list li:hover {
+    background-color: #f1f1f1; 
 }
 
 .task-list li.completed {
     text-decoration: line-through;
     color: #828080;
-    
 }
-
-/* Estilos para los botones de acción de cada tarea */
-.task-list li button {
-    background: none;
-    color: white;
-    border: 4rem;
-    font-size: 1rem;
-    padding: 0.4rem;
-    cursor:none;
-    
-}
-
